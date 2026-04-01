@@ -1,22 +1,20 @@
-# 🤖 Web Input Automation Tool (Autotyper)
+# ⚡ AutoTyper v4.0: Low-Level Input Simulator
 
-A Python-based utility designed to automate data entry and simulate keystrokes on web platforms with clipboard restrictions (such as "copy-paste" blocks).
+A robust Python automation tool designed to bypass clipboard restrictions by simulating hardware-level keystrokes. Specifically built to handle complex character sets and Brazilian Portuguese accents.
 
-## 🚀 The Problem
-Many educational and corporate platforms (e.g., "Redação Paraná") disable the right-click and paste functions to force manual typing. This tool solves that bottleneck by simulating a real human typist through OS-level commands.
+## 🚀 Why this is different
+Most autotypers fail with special characters (ã, é, ç). This version utilizes the `pynput` library to interface directly with the OS keyboard controller, ensuring 100% accuracy in text reproduction.
 
-## 🛠️ Tech Stack
+## 🛠️ Key Features
+- **Multithreaded Execution:** Uses the `threading` library to keep the GUI responsive while the automation runs in the background.
+- **Interactive GUI:** Built with `Tkinter` (ttk), featuring real-time progress bars, character counters, and time estimates.
+- **Precision Timing:** Custom speed presets (from 15ms to 80ms) and a configurable initial delay for field selection.
+- **Binary Ready:** Includes a `.spec` file for PyInstaller, allowing for easy distribution as a standalone executable.
+
+## 📋 Technical Stack
 - **Language:** Python 3.
-- **Library:** `pyautogui` (for keystroke simulation).
-- **Interface:** Simple HTML/UI for configuration.
-
-## 📋 Features
-- **Adjustable Typing Speed:** Simulate human-like typing or high-speed data entry.
-- **Cross-Platform:** Works on any text field active on your OS.
-- **Bypass Restrictions:** Effectively inputs text where standard clipboard functions are blocked.
-
-## ⚠️ Disclaimer
-This project was developed for educational purposes and to explore the capabilities of GUI automation with Python. Always use automation tools ethically and in compliance with platform terms of service.
+- **Main Libraries:** `pynput` (Input Control), `Tkinter` (GUI), `Threading` (Async execution).
+- **Packaging:** PyInstaller configuration for Windows/Linux deployment.
 
 ---
-*Built to explore Automation and Scripting with Python.*
+*Built to explore OS-level automation and asynchronous programming in Python.*
